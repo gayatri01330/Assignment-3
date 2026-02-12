@@ -1,6 +1,14 @@
-def fact(num):
-    fact = 1
-    for i in range(1,num+1):
-        fact = fact * i
-    print(f"the factorial of {num} is {fact}")
-fact(5)
+def factorial(num):
+    if num < 0:
+        print("fctorial does not exist")
+    elif num ==0 or num == 1 :
+        return 1
+    else:
+        return   num*factorial(num-1)
+    
+num = int(input("enter a number: "))
+result = factorial(num)
+print(f"factorial of {num} is : {result}")    
+
+
+    
